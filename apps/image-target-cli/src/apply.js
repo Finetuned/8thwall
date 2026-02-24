@@ -96,6 +96,7 @@ const applyCrop = async (rawImage, crop, folder, name, overwriteFiles) => {
     originalImage.toFile(path.join(folder, resources.originalImage)),
     thumbnailImage.toFile(path.join(folder, resources.thumbnailImage)),
     luminanceImage.toFile(path.join(folder, resources.luminanceImage)),
+    croppedImage.toFile(path.join(folder, resources.croppedImage)),
     fs.writeFile(dataPath, `${JSON.stringify(data, null, 2)}\n`),
   ])
 
