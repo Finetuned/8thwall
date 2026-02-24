@@ -80,6 +80,38 @@ interface CliInterface {
   promptFloat(question: string): Promise<number>
 }
 
+type Point = {
+  x: number
+  y: number
+}
+
+/**
+ * RGB color tuple: [R, G, B]
+ */
+type Color = [number, number, number]
+
+/**
+ * Pixel points describing cone geometry
+ */
+type ConePixelPoints = {
+  tl: Point
+  bl: Point
+  tr: Point
+  apex: Point
+  theta?: number
+  isFez?: boolean
+}
+
+/**
+ * Data describing unconified geometry
+ */
+type UnconifiedData = {
+  topRadius: number
+  bottomRadius: number
+  theta: number
+  outputHeight: number
+}
+
 export type {
   CliInterface,
   CropGeometry,
@@ -88,4 +120,8 @@ export type {
   ImageTargetData,
   ReferencedResources,
   TargetMetadata,
+  Point,
+  Color,
+  ConePixelPoints,
+  UnconifiedData,
 }

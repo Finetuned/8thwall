@@ -1,0 +1,9 @@
+test/image.jpg
+conical
+landscape
+n
+500
+1000
+480
+tmp
+manual-crop
